@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <form action="/datos" method="post">
+        <label for="nombre">NOMBRE</label>
+        <input type="text" name="nombre" id="nombre" placeholder="ing.name"  maxlength="100" minlength="3">
+        <br>    
+
+        <label for="apellido">APELLIDO</label>
+        <input type="text" name="apellido" id="apellido" placeholder="ing.ape" maxlength="100" minlength="3">
+        <br>
+
+        <label for="email">EMAIL</label>
+        <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="email" id="email" placeholder="ing.email"  maxlength="100" minlength="7">
+        <br>
+
+        <label for="edad">EDAD</label>
+        <input type="number"min="10" max="99">
+        <br>
+
+        <label for="genero">Genero: </label>
+        <input type="radio" name="genero" value="masculino">Masculino
+        <input type="radio" name="genero" value="femenino">Femenino
+        <input type="radio" name="genero" value="otro">Tanque de Guerra
+        <br>
+
+        <label for="provincia">PROVINCIA</label>
+        <select name="provincia" id="provincia" required>
+            <optgroup>
+                <option value="Santiago del Estero">Santiago del Estero</option>
+                <option value="Tucumán">Tucumán</option>
+                <option value="Tierra del Fuego">Tierra del Fuego</option>
+                <option value="Mendoza">Mendoza</option>
+            </optgroup>
+        </select>
+        <br>
+        
+        <label for="fecha">FECHA</label>
+        <input type="date" name="fecha" id="fecha" min="1930-01-01" max="2024-05-25" required class="fechis">
+        <br>
+
+        <label for="aceptar">Aceptar Terminos y Condiciones</label>
+        <input type="checkbox" name="aceptar" value="acepto" required>
+        <br>
+
+        <textarea name="comentario" id="comentario" cols="35" rows="4">Comentario</textarea>
+
+        <div class="pepe">
+            <input type="submit" value="Enviar Datos" class="boton">
+        </div>
+
+    </form>
+</body>
+</html>
